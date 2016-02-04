@@ -111,7 +111,6 @@ def hangman(secretWord):
     Follows the other limitations detailed in the problem write-up.
     '''
     numGuesses = 8
-    numMistakes = 0
     lettersGuessed = ""
     availableLetters = string.ascii_lowercase
     print "Welcome to the game, Hangman!"
@@ -130,7 +129,6 @@ def hangman(secretWord):
                 print "Oops! You've already guessed that letter: "+getGuessedWord(secretWord, lettersGuessed)
         else:
             if guess not in lettersGuessed:
-                numMistakes += 1
                 numGuesses -= 1
                 lettersGuessed += guess
                 print "Oops! That letter is not in my word: "+getGuessedWord(secretWord, lettersGuessed)
@@ -146,5 +144,5 @@ def hangman(secretWord):
 # and run this file to test! (hint: you might want to pick your own
 # secretWord while you're testing)
 
-secretWord = chooseWord(wordlist).lower()
-hangman(secretWord)
+#secretWord = chooseWord(wordlist).lower()
+#hangman(secretWord)
